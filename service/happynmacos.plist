@@ -12,6 +12,7 @@
     <array>
       <string>/usr/local/bin/edge</string>
       <string>/usr/local/etc/edge.conf</string>
+      <string>-f</string>
     </array>
   </dict>
 </plist>
