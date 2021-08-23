@@ -8,6 +8,10 @@
     <true/>
     <key>Label</key>
     <string>happynedge</string>
+    <key>StandardErrorPath</key>
+    <string>/usr/local/var/log/happynedge.log</string>
+    <key>StandardOutPath</key>
+    <string>/usr/local/var/log/happynedge.log</string>
     <key>ProgramArguments</key>
     <array>
       <string>/usr/local/bin/edge</string>
