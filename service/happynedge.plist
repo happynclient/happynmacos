@@ -7,7 +7,7 @@
     <key>RunAtLoad</key>
     <true/>
     <key>Label</key>
-    <string>happynmacos</string>
+    <string>happynedge</string>
     <key>ProgramArguments</key>
     <array>
       <string>/usr/local/bin/edge</string>
