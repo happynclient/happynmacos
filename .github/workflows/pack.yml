@@ -34,7 +34,7 @@ jobs:
           cwd: ../
           files: |
             ./happynmacos
-          outPath: happynet-macos-darwin-amd64-Release ${{ GITHUB_REF##*/ }}.tar.gz
+          outPath: happynet-macos-darwin-amd64-Release-${GITHUB_REF#refs/*/}.tar.gz
           # Use the output from the `compress` step
           #
       - name: Get the output
@@ -42,8 +42,8 @@ jobs:
 
       - uses: actions/upload-artifact@v1
         with:
-          name: happynet-macos-darwin-amd64-Release ${{ GITHUB_REF##*/ }}.tar.gz
-          path: happynet-macos-darwin-amd64-Release ${{ GITHUB_REF##*/ }}.tar.gz
+          name: happynet-macos-darwin-amd64-Release-${GITHUB_REF#refs/*/}.tar.gz
+          path: happynet-macos-darwin-amd64-Release-${GITHUB_REF#refs/*/}.tar.gz
 
       - name: Create Release
         id: create_release
@@ -51,7 +51,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
         with:
-          release_name: Release ${{ GITHUB_REF##*/ }}
+          release_name: Release-${GITHUB_REF##*/}
           body: |
             happyn.cc macos client release ${{ github.ref }}
           draft: false
