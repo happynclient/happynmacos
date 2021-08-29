@@ -7,15 +7,15 @@
     <key>RunAtLoad</key>
     <true/>
     <key>Label</key>
-    <string>happynedge</string>
+    <string>happynet</string>
     <key>StandardErrorPath</key>
-    <string>/usr/local/var/log/happynedge.log</string>
+    <string>/usr/local/var/log/happynet.log</string>
     <key>StandardOutPath</key>
-    <string>/usr/local/var/log/happynedge.log</string>
+    <string>/usr/local/var/log/happynet.log</string>
     <key>ProgramArguments</key>
     <array>
-      <string>/usr/local/bin/edge</string>
-      <string>/usr/local/etc/edge.conf</string>
+      <string>/usr/local/bin/happynet</string>
+      <string>/usr/local/etc/happynet.conf</string>
       <string>-f</string>
     </array>
   </dict>
