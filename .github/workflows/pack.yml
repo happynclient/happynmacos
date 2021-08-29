@@ -30,6 +30,6 @@ jobs:
         uses: ncipollo/release-action@v1.5.0
         with:
           artifacts: "happynet-macos-darwin*.tar.gz"
-          token: ${{ secrets.GITHUB_RElEASE_TOKEN }}
+          token: ${{ secrets.RElEASE_TOKEN }}
           body: |
-            happynet macOS ${{ github.ref }}Release
+            happynet macOS ${GITHUB_REF#refs/*/} Release
