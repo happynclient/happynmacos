@@ -31,9 +31,9 @@ jobs:
         id: compress
         with:
           command: c
-          cwd: ../
+          cwd: ./
           files: |
-            ./happynmacos
+            ../happynmacos
           outPath: happynet-macos-darwin-amd64-Release-${GITHUB_REF#refs/*/}.tar.gz
           # Use the output from the `compress` step
           #
