@@ -63,7 +63,7 @@ tar zxvf happynet-macos-darwin-amd64-0.2.tar.gz
 sudo mkdir  -p /usr/local/bin
 sudo mkdir -p /usr/local/etc
 sudo mkdir -p /usr/local/var/log
-cd happynet-macos-darwin-amd64-0.2
+cd happynmacos
 
 sudo chmod +x bin/happynet
 sudo cp bin/happynet /usr/local/bin/
