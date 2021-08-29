@@ -24,35 +24,15 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Compress action step
-        uses: ./ # Uses an action in the root directory
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
-        id: compress
-        with:
-          command: c
-          cwd: ./
-          files: |
-            ../happynmacos
-          outPath: happynet-macos-darwin-amd64-Release-${GITHUB_REF#refs/*/}.tar.gz
-          # Use the output from the `compress` step
-          #
-      - name: Get the output
-        run: echo "The output was ${{ steps.compress.outputs.done }}"
-
-      - uses: actions/upload-artifact@v1
-        with:
-          name: happynet-macos-darwin-amd64-Release-${GITHUB_REF#refs/*/}.tar.gz
-          path: happynet-macos-darwin-amd64-Release-${GITHUB_REF#refs/*/}.tar.gz
+      - run: make tar tagname=${GITHUB_REF#refs/*/}
 
       - name: Create Release
-        id: create_release
-        uses: actions/create-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
+        uses: ncipollo/release-action@v1.5.0
         with:
-          release_name: Release-${GITHUB_REF##*/}
+          artifacts: "happynet-macos-darwin*.tar.gz"
+          token: ${{ secrets.GITHUB_RElEASE_TOKEN }}
           body: |
             happyn.cc macos client release ${{ github.ref }}
           draft: false
           prerelease: false
+
