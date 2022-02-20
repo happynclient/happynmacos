@@ -10,7 +10,7 @@ happynet是happyn.cc 提供的组建虚拟局域网的客户端工具， 这是M
 
 项目基于[N2N](https://github.com/happynlab/n2n)
 
-upstream form n2n 2.9.0 macOS build by happyn.cc
+upstream form n2n 2.9.0 macOS build by happyn.cn
 
 
 ## 安装
@@ -28,17 +28,11 @@ happynet依赖于网络TAP虚拟网卡,所以需要首先安装驱动
 
 2. 安装网卡驱动
 
-如果是MacOS 11系统，请执行
-
 ```
+brew tap happynclient/taps
 brew install --cask  tuntap
 ```
 
-如果是MacOS 10系统，请执行
-
-```
-brew install tuntap
-```
 
 3. 由于安全性的需要，安装时如果出现鉴定或者安全性警告，请输入管理员密码通过，或者是打开 `系统偏好设置` 中的 `安全性与隐私`，通过操作。
 
@@ -71,7 +65,7 @@ sudo cp conf/happynet.conf /usr/local/etc/
 service/happynet.plist /Library/launchAgents/cc.happyn.happynet.plist
 ```
 
-4. 修改配置文件,您需要填入的4个参数(从您的happyn.cc web端后台登录可以获取):
+4. 修改配置文件,您需要填入的4个参数(从您的happyn.cn web端后台登录可以获取):
 
 ```
 sudo vim /usr/local/etc/happynet.conf
@@ -127,4 +121,4 @@ sudo launchctl kill 15 system/happynet
 
 * 还有其它问题？
 
-没关系，请到我们的[交流论坛](https://forum.happyn.cc/t/macos) 向我们反馈问题，谢谢您的包容和支持！
+没关系，请到我们的[交流论坛](https://forum.happyn.cn/t/macos) 向我们反馈问题，谢谢您的包容和支持！
