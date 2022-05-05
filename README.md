@@ -39,7 +39,88 @@ brew install --cask  tuntap
 点击允许后，再次执行安装命令，系统可能提示需要重新启动生效;
 
 
-### 安装自定义系统服务
+#### 下面安装happynet客户端，有两种方式
+
+### 采用brew安装happynet客户端服务
+
+1. 安装
+```
+brew tap happynclient/taps
+brew install happynet
+```
+
+2. 修改配置文件,您需要填入的4个参数(从您的happyn web端后台登录可以获取):
+    - 本地地址：您的虚拟服务子网IP地址，ip网段从web界面可查，如图所示，这个服务子网为10.251.56.0/24，您可以设定从 10.251.56.1 -- 10.251.56.254 任意地址，只要保证每台机器不冲突即可
+    - 服务ID：从后台web界面可以得到，是分配给每个用户的唯一子网标识
+    - 服务密钥：从后台web界面可以得到, 是系统为您的分配的子网token，您可以自己设定，但是只有相同 "服务ID+服务密钥"的机器才能互通
+    - 服务器端口：从后台web界面可以得到
+
+```
+sudo vim /usr/local/etc/happynet.conf
+
+# ==============================
+# 这里填入您获取的服务ID
+-c=VIP0xxxxx
+
+# 这里填入您获取的服务密钥
+-k=1c20743f
+
+# 这里填入您指定的网卡MAC地址，如果不需要手工指定的话，直接用 `#` 注释掉即可
+# -m=xx:xx:xx:xx:xx:xx
+
+# 这里填入您的合法子网IP地址，这个地址不能与其它连入设备相冲突，范围是x.x.x.1--x.x.x.254
+-a=10.251.56.61/24
+
+# 这里填入您的 `服务器地址:端口`
+-l=vip00.happyn.cc:30002
+```
+
+3. 设定参数完毕后，执行以下命令启动:
+```
+sudo brew services start happynet
+```
+
+4. 查看状态
+```
+tail -f /usr/local/var/log/homebrew.mxcl.happynet.log
+```
+如果看到
+```
+HTML
+"[OK] Edge Peer <<< ================ >>> Super Node"，
+```
+表示已经成功加入子网
+
+5. 查看系统信息，您会看到一个名为 tap0的虚拟网卡
+```
+sudo ifconfig
+
+tap0: flags=8843<UP,BROADCAST,RUNNING,SIMPLEX,MULTICAST> mtu 1290
+        ether 16:96:63:c6:5f:c9
+        inet 10.251.56.61 netmask 0xffffff00 broadcast 10.251.56.255
+        media: autoselect
+        status: active
+        open (pid 34807)
+```
+
+6. 查看服务状态
+```
+$ sudo brew services ls
+
+Name     Status  User Plist
+happynet started root /Library/LaunchDaemons/homebrew.mxcl.happynet.plist
+```
+
+7. 五分钟后，刷新您的Web后台，此设备会自动记录到Web界面中
+
+8. 卸载happynet 服务
+```
+brew uninstall happynet
+brew uninstall tuntap
+```
+
+
+### 手工自定义安装happynet客户端服务
 
 
 1. 到[发布页面](https://github.com/happynclient/happynmacos/releases)直接下载我们最新的安装包
