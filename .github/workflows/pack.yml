@@ -33,4 +33,4 @@ jobs:
           release_name: happynet macOS ${{ github.ref }} Release
           token: ${{ secrets.RElEASE_TOKEN }}
           body: |
-              build by happyn.cc
+              build by happyn.net
