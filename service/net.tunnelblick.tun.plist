@@ -3,11 +3,11 @@
 <plist version="1.0">
 <dict>
     <key>Label</key>
-    <string>net.happyn.tap</string>
+    <string>net.tunnelblick.tun</string>
     <key>ProgramArguments</key>
     <array>
         <string>/sbin/kextload</string>
-        <string>/Library/Extensions/tap.kext</string>
+        <string>/Library/Extensions/tun.kext</string>
     </array>
     <key>KeepAlive</key>
     <false/>

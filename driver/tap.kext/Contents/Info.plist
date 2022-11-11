@@ -7,7 +7,7 @@
 	<key>CFBundleExecutable</key>
 	<string>tap</string>
 	<key>CFBundleIdentifier</key>
-	<string>net.happyn.tap</string>
+	<string>net.tunnelblick.tap</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
@@ -15,7 +15,7 @@
 	<key>CFBundlePackageType</key>
 	<string>KEXT</string>
 	<key>CFBundleShortVersionString</key>
-	<string>20141104 (happyn tap kext version 5.0; happyn build 5622)</string>
+	<string>20141104 (Tunnelblick tap kext version 5.0; Tunnelblick build 5622)</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
