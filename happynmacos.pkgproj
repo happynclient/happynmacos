@@ -83,22 +83,6 @@
 											<key>UID</key>
 											<integer>0</integer>
 										</dict>
-										<dict>
-											<key>CHILDREN</key>
-											<array/>
-											<key>GID</key>
-											<integer>80</integer>
-											<key>PATH</key>
-											<string>scripts/loadtap.sh</string>
-											<key>PATH_TYPE</key>
-											<integer>1</integer>
-											<key>PERMISSIONS</key>
-											<integer>420</integer>
-											<key>TYPE</key>
-											<integer>3</integer>
-											<key>UID</key>
-											<integer>0</integer>
-										</dict>
 									</array>
 									<key>GID</key>
 									<integer>80</integer>
@@ -184,22 +168,12 @@
 										<dict>
 											<key>BUNDLE_CAN_DOWNGRADE</key>
 											<false/>
-											<key>BUNDLE_POSTINSTALL_PATH</key>
-											<dict>
-												<key>PATH_TYPE</key>
-												<integer>0</integer>
-											</dict>
-											<key>BUNDLE_PREINSTALL_PATH</key>
-											<dict>
-												<key>PATH_TYPE</key>
-												<integer>0</integer>
-											</dict>
 											<key>CHILDREN</key>
 											<array/>
 											<key>GID</key>
 											<integer>0</integer>
 											<key>PATH</key>
-											<string>driver/tap.kext</string>
+											<string>pkg/driver/tap.kext</string>
 											<key>PATH_TYPE</key>
 											<integer>1</integer>
 											<key>PERMISSIONS</key>
@@ -212,22 +186,12 @@
 										<dict>
 											<key>BUNDLE_CAN_DOWNGRADE</key>
 											<false/>
-											<key>BUNDLE_POSTINSTALL_PATH</key>
-											<dict>
-												<key>PATH_TYPE</key>
-												<integer>0</integer>
-											</dict>
-											<key>BUNDLE_PREINSTALL_PATH</key>
-											<dict>
-												<key>PATH_TYPE</key>
-												<integer>0</integer>
-											</dict>
 											<key>CHILDREN</key>
 											<array/>
 											<key>GID</key>
 											<integer>0</integer>
 											<key>PATH</key>
-											<string>driver/tun.kext</string>
+											<string>pkg/driver/tun.kext</string>
 											<key>PATH_TYPE</key>
 											<integer>1</integer>
 											<key>PERMISSIONS</key>
@@ -356,7 +320,7 @@
 											<key>GID</key>
 											<integer>0</integer>
 											<key>PATH</key>
-											<string>service/net.tunnelblick.tap.plist</string>
+											<string>pkg/launchd/happynet.plist</string>
 											<key>PATH_TYPE</key>
 											<integer>1</integer>
 											<key>PERMISSIONS</key>
@@ -372,7 +336,23 @@
 											<key>GID</key>
 											<integer>0</integer>
 											<key>PATH</key>
-											<string>service/net.tunnelblick.tun.plist</string>
+											<string>pkg/launchd/net.tunnelblick.tap.plist</string>
+											<key>PATH_TYPE</key>
+											<integer>1</integer>
+											<key>PERMISSIONS</key>
+											<integer>420</integer>
+											<key>TYPE</key>
+											<integer>3</integer>
+											<key>UID</key>
+											<integer>0</integer>
+										</dict>
+										<dict>
+											<key>CHILDREN</key>
+											<array/>
+											<key>GID</key>
+											<integer>0</integer>
+											<key>PATH</key>
+											<string>pkg/launchd/net.tunnelblick.tun.plist</string>
 											<key>PATH_TYPE</key>
 											<integer>1</integer>
 											<key>PERMISSIONS</key>
