@@ -25,17 +25,111 @@
 									<array>
 										<dict>
 											<key>CHILDREN</key>
-											<array/>
+											<array>
+												<dict>
+													<key>CHILDREN</key>
+													<array/>
+													<key>GID</key>
+													<integer>80</integer>
+													<key>PATH</key>
+													<string>bin/x64/happynet</string>
+													<key>PATH_TYPE</key>
+													<integer>1</integer>
+													<key>PERMISSIONS</key>
+													<integer>493</integer>
+													<key>TYPE</key>
+													<integer>3</integer>
+													<key>UID</key>
+													<integer>0</integer>
+												</dict>
+												<dict>
+													<key>BUNDLE_CAN_DOWNGRADE</key>
+													<false/>
+													<key>BUNDLE_POSTINSTALL_PATH</key>
+													<dict>
+														<key>PATH_TYPE</key>
+														<integer>0</integer>
+													</dict>
+													<key>BUNDLE_PREINSTALL_PATH</key>
+													<dict>
+														<key>PATH_TYPE</key>
+														<integer>0</integer>
+													</dict>
+													<key>CHILDREN</key>
+													<array/>
+													<key>GID</key>
+													<integer>80</integer>
+													<key>PATH</key>
+													<string>bin/happynmonitor.app</string>
+													<key>PATH_TYPE</key>
+													<integer>1</integer>
+													<key>PERMISSIONS</key>
+													<integer>493</integer>
+													<key>TYPE</key>
+													<integer>3</integer>
+													<key>UID</key>
+													<integer>0</integer>
+												</dict>
+												<dict>
+													<key>CHILDREN</key>
+													<array/>
+													<key>GID</key>
+													<integer>80</integer>
+													<key>PATH</key>
+													<string>bin/uninstall.sh</string>
+													<key>PATH_TYPE</key>
+													<integer>1</integer>
+													<key>PERMISSIONS</key>
+													<integer>493</integer>
+													<key>TYPE</key>
+													<integer>3</integer>
+													<key>UID</key>
+													<integer>0</integer>
+												</dict>
+											</array>
 											<key>GID</key>
 											<integer>80</integer>
 											<key>PATH</key>
-											<string>bin/x64/happynet</string>
+											<string>bin</string>
 											<key>PATH_TYPE</key>
-											<integer>1</integer>
+											<integer>2</integer>
 											<key>PERMISSIONS</key>
-											<integer>493</integer>
+											<integer>509</integer>
 											<key>TYPE</key>
-											<integer>3</integer>
+											<integer>2</integer>
+											<key>UID</key>
+											<integer>0</integer>
+										</dict>
+										<dict>
+											<key>CHILDREN</key>
+											<array>
+												<dict>
+													<key>CHILDREN</key>
+													<array/>
+													<key>GID</key>
+													<integer>80</integer>
+													<key>PATH</key>
+													<string>conf/happynet.conf</string>
+													<key>PATH_TYPE</key>
+													<integer>1</integer>
+													<key>PERMISSIONS</key>
+													<integer>420</integer>
+													<key>TYPE</key>
+													<integer>3</integer>
+													<key>UID</key>
+													<integer>0</integer>
+												</dict>
+											</array>
+											<key>GID</key>
+											<integer>80</integer>
+											<key>PATH</key>
+											<string>etc</string>
+											<key>PATH_TYPE</key>
+											<integer>2</integer>
+											<key>PERMISSIONS</key>
+											<integer>509</integer>
+											<key>TYPE</key>
+											<integer>2</integer>
 											<key>UID</key>
 											<integer>0</integer>
 										</dict>
@@ -45,57 +139,13 @@
 											<key>GID</key>
 											<integer>80</integer>
 											<key>PATH</key>
-											<string>conf/happynet.conf</string>
+											<string>var</string>
 											<key>PATH_TYPE</key>
-											<integer>1</integer>
+											<integer>2</integer>
 											<key>PERMISSIONS</key>
-											<integer>420</integer>
+											<integer>509</integer>
 											<key>TYPE</key>
-											<integer>3</integer>
-											<key>UID</key>
-											<integer>0</integer>
-										</dict>
-										<dict>
-											<key>BUNDLE_CAN_DOWNGRADE</key>
-											<false/>
-											<key>BUNDLE_POSTINSTALL_PATH</key>
-											<dict>
-												<key>PATH_TYPE</key>
-												<integer>0</integer>
-											</dict>
-											<key>BUNDLE_PREINSTALL_PATH</key>
-											<dict>
-												<key>PATH_TYPE</key>
-												<integer>0</integer>
-											</dict>
-											<key>CHILDREN</key>
-											<array/>
-											<key>GID</key>
-											<integer>80</integer>
-											<key>PATH</key>
-											<string>bin/happynmonitor.app</string>
-											<key>PATH_TYPE</key>
-											<integer>1</integer>
-											<key>PERMISSIONS</key>
-											<integer>493</integer>
-											<key>TYPE</key>
-											<integer>3</integer>
-											<key>UID</key>
-											<integer>0</integer>
-										</dict>
-										<dict>
-											<key>CHILDREN</key>
-											<array/>
-											<key>GID</key>
-											<integer>80</integer>
-											<key>PATH</key>
-											<string>bin/uninstall.sh</string>
-											<key>PATH_TYPE</key>
-											<integer>1</integer>
-											<key>PERMISSIONS</key>
-											<integer>493</integer>
-											<key>TYPE</key>
-											<integer>3</integer>
+											<integer>2</integer>
 											<key>UID</key>
 											<integer>0</integer>
 										</dict>
@@ -358,7 +408,7 @@
 											<key>GID</key>
 											<integer>0</integer>
 											<key>PATH</key>
-											<string>pkg/launchd/happynet.plist</string>
+											<string>pkg/launchd/net.happyn.plist</string>
 											<key>PATH_TYPE</key>
 											<integer>1</integer>
 											<key>PERMISSIONS</key>

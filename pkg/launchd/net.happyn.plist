@@ -9,13 +9,13 @@
     <key>Label</key>
     <string>happynet</string>
     <key>StandardErrorPath</key>
-    <string>/usr/local/var/log/happynet.log</string>
+    <string>/Applications/happynet/var/happynet.log</string>
     <key>StandardOutPath</key>
-    <string>/usr/local/var/log/happynet.log</string>
+    <string>/Applications/happynet/var/happynet.log</string>
     <key>ProgramArguments</key>
     <array>
-      <string>/usr/local/bin/happynet</string>
-      <string>/usr/local/etc/happynet.conf</string>
+      <string>/Applications/happynet/bin/happynet</string>
+      <string>/Applications/happynet/etc/happynet.conf</string>
       <string>-f</string>
     </array>
   </dict>
