@@ -43,34 +43,6 @@
 													<integer>0</integer>
 												</dict>
 												<dict>
-													<key>BUNDLE_CAN_DOWNGRADE</key>
-													<false/>
-													<key>BUNDLE_POSTINSTALL_PATH</key>
-													<dict>
-														<key>PATH_TYPE</key>
-														<integer>0</integer>
-													</dict>
-													<key>BUNDLE_PREINSTALL_PATH</key>
-													<dict>
-														<key>PATH_TYPE</key>
-														<integer>0</integer>
-													</dict>
-													<key>CHILDREN</key>
-													<array/>
-													<key>GID</key>
-													<integer>80</integer>
-													<key>PATH</key>
-													<string>bin/happynmonitor.app</string>
-													<key>PATH_TYPE</key>
-													<integer>1</integer>
-													<key>PERMISSIONS</key>
-													<integer>493</integer>
-													<key>TYPE</key>
-													<integer>3</integer>
-													<key>UID</key>
-													<integer>0</integer>
-												</dict>
-												<dict>
 													<key>CHILDREN</key>
 													<array/>
 													<key>GID</key>
@@ -236,6 +208,8 @@
 											<false/>
 											<key>BUNDLE_POSTINSTALL_PATH</key>
 											<dict>
+												<key>PATH</key>
+												<string>/Users/happyn/project/happynmacos/pkg/scripts/tap/postinstall</string>
 												<key>PATH_TYPE</key>
 												<integer>0</integer>
 											</dict>
@@ -408,7 +382,7 @@
 											<key>GID</key>
 											<integer>0</integer>
 											<key>PATH</key>
-											<string>pkg/launchd/net.happyn.plist</string>
+											<string>pkg/launchd/net.happyn.macapp.plist</string>
 											<key>PATH_TYPE</key>
 											<integer>1</integer>
 											<key>PERMISSIONS</key>
@@ -722,7 +696,7 @@
 				<key>FOLLOW_SYMBOLIC_LINKS</key>
 				<false/>
 				<key>IDENTIFIER</key>
-				<string>net.happyn.pkg.happynmacosArm</string>
+				<string>net.happyn.happynmacosArm</string>
 				<key>LOCATION</key>
 				<integer>0</integer>
 				<key>NAME</key>
@@ -738,7 +712,7 @@
 				<key>USE_HFS+_COMPRESSION</key>
 				<false/>
 				<key>VERSION</key>
-				<string>1.8</string>
+				<string>1.2</string>
 			</dict>
 			<key>TYPE</key>
 			<integer>0</integer>
