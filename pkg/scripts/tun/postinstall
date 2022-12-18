@@ -7,7 +7,7 @@ rm -rf /System/Library/Extensions/tun.kext
 rm -rf /Library/StartupItems/tun
 
 # Unload an old extension (might fail).
-#kextunload -b foo.tun
+# kextunload -b foo.tun
 kextunload -b net.tunnelblick.tun
 
 # Load the new version.

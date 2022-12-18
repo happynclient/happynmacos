@@ -6,6 +6,7 @@ rm -rf /Library/Extensions/tap.kext
 
 # Unload an old extension (might fail).
 kextunload -b net.tunnelblick.tun 2>/dev/null
+kextunload -b net.tunnelblick.tap 2>/dev/null
 
 launchctl unload -w /Library/LaunchDaemons/net.happyn.plist 2>/dev/null
 

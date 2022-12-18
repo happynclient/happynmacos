@@ -7,7 +7,7 @@ rm -rf /System/Library/Extensions/tap.kext
 rm -rf /Library/StartupItems/tap
 
 # Unload an old extension (might fail).
-kextunload -b foo.tap
+# kextunload -b foo.tap
 kextunload -b net.tunnelblick.tap
 
 # Load the new version.
