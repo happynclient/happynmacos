@@ -4,7 +4,7 @@ happynet是happyn.net 提供的组建虚拟局域网的客户端工具， 这是
 
 ## 系统要求
 
-* >=MacOS 10.13
+`>=MacOS 10.13`
 
 ## build from
 
